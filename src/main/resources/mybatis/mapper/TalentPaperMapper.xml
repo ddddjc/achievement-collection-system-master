@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.TalentPaperMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.TalentPaper">
+    <!--@mbg.generated-->
+    <!--@Table talent_paper-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="declarer_rank" property="declarerRank" />
+    <result column="author" property="author" />
+    <result column="co_author" property="coAuthor" />
+    <result column="authors" property="authors" />
+    <result column="title" property="title" />
+    <result column="journal_title" property="journalTitle" />
+    <result column="issue_number" property="issueNumber" />
+    <result column="paper_number" property="paperNumber" />
+    <result column="issuing_time" property="issuingTime" />
+    <result column="paper_category" property="paperCategory" />
+    <result column="achievement_source" property="achievementSource" />
+    <result column="research_category" property="researchCategory" />
+    <result column="subject_category" property="subjectCategory" />
+    <result column="issuance_scope" property="issuanceScope" />
+    <result column="article_address" property="articleAddress" />
+    <result column="remarks" property="remarks" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, declarer_rank, author, co_author, 
+    authors, title, journal_title, issue_number, paper_number, issuing_time, paper_category, 
+    achievement_source, research_category, subject_category, issuance_scope, article_address, 
+    remarks, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.TalentPaper">
+    <!--@mbg.generated-->
+    insert into talent_paper
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="coAuthor != null">
+        co_author,
+      </if>
+      <if test="authors != null">
+        authors,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="journalTitle != null">
+        journal_title,
+      </if>
+      <if test="issueNumber != null">
+        issue_number,
+      </if>
+      <if test="paperNumber != null">
+        paper_number,
+      </if>
+      <if test="issuingTime != null">
+        issuing_time,
+      </if>
+      <if test="paperCategory != null">
+        paper_category,
+      </if>
+      <if test="achievementSource != null">
+        achievement_source,
+      </if>
+      <if test="researchCategory != null">
+        research_category,
+      </if>
+      <if test="subjectCategory != null">
+        subject_category,
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope,
+      </if>
+      <if test="articleAddress != null">
+        article_address,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="declarerRank != null">
+        #{declarerRank},
+      </if>
+      <if test="author != null">
+        #{author},
+      </if>
+      <if test="coAuthor != null">
+        #{coAuthor},
+      </if>
+      <if test="authors != null">
+        #{authors},
+      </if>
+      <if test="title != null">
+        #{title},
+      </if>
+      <if test="journalTitle != null">
+        #{journalTitle},
+      </if>
+      <if test="issueNumber != null">
+        #{issueNumber},
+      </if>
+      <if test="paperNumber != null">
+        #{paperNumber},
+      </if>
+      <if test="issuingTime != null">
+        #{issuingTime},
+      </if>
+      <if test="paperCategory != null">
+        #{paperCategory},
+      </if>
+      <if test="achievementSource != null">
+        #{achievementSource},
+      </if>
+      <if test="researchCategory != null">
+        #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        #{subjectCategory},
+      </if>
+      <if test="issuanceScope != null">
+        #{issuanceScope},
+      </if>
+      <if test="articleAddress != null">
+        #{articleAddress},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.TalentPaper">
+    <!--@mbg.generated-->
+    update talent_paper
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank = #{declarerRank},
+      </if>
+      <if test="author != null">
+        author = #{author},
+      </if>
+      <if test="coAuthor != null">
+        co_author = #{coAuthor},
+      </if>
+      <if test="authors != null">
+        authors = #{authors},
+      </if>
+      <if test="title != null">
+        title = #{title},
+      </if>
+      <if test="journalTitle != null">
+        journal_title = #{journalTitle},
+      </if>
+      <if test="issueNumber != null">
+        issue_number = #{issueNumber},
+      </if>
+      <if test="paperNumber != null">
+        paper_number = #{paperNumber},
+      </if>
+      <if test="issuingTime != null">
+        issuing_time = #{issuingTime},
+      </if>
+      <if test="paperCategory != null">
+        paper_category = #{paperCategory},
+      </if>
+      <if test="achievementSource != null">
+        achievement_source = #{achievementSource},
+      </if>
+      <if test="researchCategory != null">
+        research_category = #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        subject_category = #{subjectCategory},
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope = #{issuanceScope},
+      </if>
+      <if test="articleAddress != null">
+        article_address = #{articleAddress},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_paper
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_paper
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_paper
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  talent_paper
+    where id=#{id}
+  </delete>
+</mapper>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ServiceTrainMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ServiceTrain">
+    <!--@mbg.generated-->
+    <!--@Table service_train-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="topic" property="topic" />
+    <result column="form" property="form" />
+    <result column="object" property="object" />
+    <result column="training_time" property="trainingTime" />
+    <result column="location" property="location" />
+    <result column="finisher" property="finisher" />
+    <result column="participants" property="participants" />
+    <result column="remarks" property="remarks" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, topic, form, `object`, training_time, 
+    `location`, finisher, participants, remarks, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ServiceTrain">
+    <!--@mbg.generated-->
+    insert into service_train
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="topic != null">
+        topic,
+      </if>
+      <if test="form != null">
+        form,
+      </if>
+      <if test="object != null">
+        `object`,
+      </if>
+      <if test="trainingTime != null">
+        training_time,
+      </if>
+      <if test="location != null">
+        `location`,
+      </if>
+      <if test="finisher != null">
+        finisher,
+      </if>
+      <if test="participants != null">
+        participants,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="topic != null">
+        #{topic},
+      </if>
+      <if test="form != null">
+        #{form},
+      </if>
+      <if test="object != null">
+        #{object},
+      </if>
+      <if test="trainingTime != null">
+        #{trainingTime},
+      </if>
+      <if test="location != null">
+        #{location},
+      </if>
+      <if test="finisher != null">
+        #{finisher},
+      </if>
+      <if test="participants != null">
+        #{participants},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ServiceTrain">
+    <!--@mbg.generated-->
+    update service_train
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="topic != null">
+        topic = #{topic},
+      </if>
+      <if test="form != null">
+        form = #{form},
+      </if>
+      <if test="object != null">
+        `object` = #{object},
+      </if>
+      <if test="trainingTime != null">
+        training_time = #{trainingTime},
+      </if>
+      <if test="location != null">
+        `location` = #{location},
+      </if>
+      <if test="finisher != null">
+        finisher = #{finisher},
+      </if>
+      <if test="participants != null">
+        participants = #{participants},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_train
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_train
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_train
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  service_train
+    where id=#{id}
+  </delete>
+</mapper>

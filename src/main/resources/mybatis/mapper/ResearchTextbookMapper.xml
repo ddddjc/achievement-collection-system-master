@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ResearchTextbookMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ResearchTextbook">
+    <!--@mbg.generated-->
+    <!--@Table research_textbook-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="declarer_rank" property="declarerRank" />
+    <result column="author" property="author" />
+    <result column="co_author" property="coAuthor" />
+    <result column="title" property="title" />
+    <result column="achievement_source" property="achievementSource" />
+    <result column="achievement_form" property="achievementForm" />
+    <result column="research_category" property="researchCategory" />
+    <result column="subject_category" property="subjectCategory" />
+    <result column="textbook" property="textbook" />
+    <result column="press" property="press" />
+    <result column="book_number" property="bookNumber" />
+    <result column="published_date" property="publishedDate" />
+    <result column="issuance_scope" property="issuanceScope" />
+    <result column="is_national" property="isNational" />
+    <result column="remarks" property="remarks" />
+    <result column="word_count" property="wordCount" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, declarer_rank, author, co_author, 
+    title, achievement_source, achievement_form, research_category, subject_category, 
+    textbook, press, book_number, published_date, issuance_scope, is_national, remarks, 
+    word_count, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ResearchTextbook">
+    <!--@mbg.generated-->
+    insert into research_textbook
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="coAuthor != null">
+        co_author,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="achievementSource != null">
+        achievement_source,
+      </if>
+      <if test="achievementForm != null">
+        achievement_form,
+      </if>
+      <if test="researchCategory != null">
+        research_category,
+      </if>
+      <if test="subjectCategory != null">
+        subject_category,
+      </if>
+      <if test="textbook != null">
+        textbook,
+      </if>
+      <if test="press != null">
+        press,
+      </if>
+      <if test="bookNumber != null">
+        book_number,
+      </if>
+      <if test="publishedDate != null">
+        published_date,
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope,
+      </if>
+      <if test="isNational != null">
+        is_national,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="wordCount != null">
+        word_count,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="declarerRank != null">
+        #{declarerRank},
+      </if>
+      <if test="author != null">
+        #{author},
+      </if>
+      <if test="coAuthor != null">
+        #{coAuthor},
+      </if>
+      <if test="title != null">
+        #{title},
+      </if>
+      <if test="achievementSource != null">
+        #{achievementSource},
+      </if>
+      <if test="achievementForm != null">
+        #{achievementForm},
+      </if>
+      <if test="researchCategory != null">
+        #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        #{subjectCategory},
+      </if>
+      <if test="textbook != null">
+        #{textbook},
+      </if>
+      <if test="press != null">
+        #{press},
+      </if>
+      <if test="bookNumber != null">
+        #{bookNumber},
+      </if>
+      <if test="publishedDate != null">
+        #{publishedDate},
+      </if>
+      <if test="issuanceScope != null">
+        #{issuanceScope},
+      </if>
+      <if test="isNational != null">
+        #{isNational},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="wordCount != null">
+        #{wordCount},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ResearchTextbook">
+    <!--@mbg.generated-->
+    update research_textbook
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank = #{declarerRank},
+      </if>
+      <if test="author != null">
+        author = #{author},
+      </if>
+      <if test="coAuthor != null">
+        co_author = #{coAuthor},
+      </if>
+      <if test="title != null">
+        title = #{title},
+      </if>
+      <if test="achievementSource != null">
+        achievement_source = #{achievementSource},
+      </if>
+      <if test="achievementForm != null">
+        achievement_form = #{achievementForm},
+      </if>
+      <if test="researchCategory != null">
+        research_category = #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        subject_category = #{subjectCategory},
+      </if>
+      <if test="textbook != null">
+        textbook = #{textbook},
+      </if>
+      <if test="press != null">
+        press = #{press},
+      </if>
+      <if test="bookNumber != null">
+        book_number = #{bookNumber},
+      </if>
+      <if test="publishedDate != null">
+        published_date = #{publishedDate},
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope = #{issuanceScope},
+      </if>
+      <if test="isNational != null">
+        is_national = #{isNational},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="wordCount != null">
+        word_count = #{wordCount},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_textbook
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_textbook
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_textbook
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  research_textbook
+    where id=#{id}
+  </delete>
+</mapper>

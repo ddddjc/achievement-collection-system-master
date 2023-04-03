@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.TalentProjectMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.TalentProject">
+    <!--@mbg.generated-->
+    <!--@Table talent_project-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="declarer_rank" property="declarerRank" />
+    <result column="host" property="host" />
+    <result column="participant" property="participant" />
+    <result column="project_name" property="projectName" />
+    <result column="project_id" property="projectId" />
+    <result column="project_source" property="projectSource" />
+    <result column="category" property="category" />
+    <result column="level" property="level" />
+    <result column="approved_date" property="approvedDate" />
+    <result column="start_time" property="startTime" />
+    <result column="end_time" property="endTime" />
+    <result column="approved_funding" property="approvedFunding" />
+    <result column="research_category" property="researchCategory" />
+    <result column="subject_category" property="subjectCategory" />
+    <result column="remarks" property="remarks" />
+    <result column="status" property="status" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, declarer_rank, `host`, participant, 
+    project_name, project_id, project_source, category, `level`, approved_date, start_time, 
+    end_time, approved_funding, research_category, subject_category, remarks, `status`, 
+    department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.TalentProject">
+    <!--@mbg.generated-->
+    insert into talent_project
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank,
+      </if>
+      <if test="host != null">
+        `host`,
+      </if>
+      <if test="participant != null">
+        participant,
+      </if>
+      <if test="projectName != null">
+        project_name,
+      </if>
+      <if test="projectId != null">
+        project_id,
+      </if>
+      <if test="projectSource != null">
+        project_source,
+      </if>
+      <if test="category != null">
+        category,
+      </if>
+      <if test="level != null">
+        `level`,
+      </if>
+      <if test="approvedDate != null">
+        approved_date,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="approvedFunding != null">
+        approved_funding,
+      </if>
+      <if test="researchCategory != null">
+        research_category,
+      </if>
+      <if test="subjectCategory != null">
+        subject_category,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="declarerRank != null">
+        #{declarerRank},
+      </if>
+      <if test="host != null">
+        #{host},
+      </if>
+      <if test="participant != null">
+        #{participant},
+      </if>
+      <if test="projectName != null">
+        #{projectName},
+      </if>
+      <if test="projectId != null">
+        #{projectId},
+      </if>
+      <if test="projectSource != null">
+        #{projectSource},
+      </if>
+      <if test="category != null">
+        #{category},
+      </if>
+      <if test="level != null">
+        #{level},
+      </if>
+      <if test="approvedDate != null">
+        #{approvedDate},
+      </if>
+      <if test="startTime != null">
+        #{startTime},
+      </if>
+      <if test="endTime != null">
+        #{endTime},
+      </if>
+      <if test="approvedFunding != null">
+        #{approvedFunding},
+      </if>
+      <if test="researchCategory != null">
+        #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        #{subjectCategory},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="status != null">
+        #{status},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.TalentProject">
+    <!--@mbg.generated-->
+    update talent_project
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank = #{declarerRank},
+      </if>
+      <if test="host != null">
+        `host` = #{host},
+      </if>
+      <if test="participant != null">
+        participant = #{participant},
+      </if>
+      <if test="projectName != null">
+        project_name = #{projectName},
+      </if>
+      <if test="projectId != null">
+        project_id = #{projectId},
+      </if>
+      <if test="projectSource != null">
+        project_source = #{projectSource},
+      </if>
+      <if test="category != null">
+        category = #{category},
+      </if>
+      <if test="level != null">
+        `level` = #{level},
+      </if>
+      <if test="approvedDate != null">
+        approved_date = #{approvedDate},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime},
+      </if>
+      <if test="approvedFunding != null">
+        approved_funding = #{approvedFunding},
+      </if>
+      <if test="researchCategory != null">
+        research_category = #{researchCategory},
+      </if>
+      <if test="subjectCategory != null">
+        subject_category = #{subjectCategory},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="status != null">
+        `status` = #{status},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_project
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_project
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_project
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  talent_project
+    where id=#{id}
+  </delete>
+</mapper>

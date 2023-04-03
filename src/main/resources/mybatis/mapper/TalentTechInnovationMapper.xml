@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.TalentTechInnovationMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.TalentTechInnovation">
+    <!--@mbg.generated-->
+    <!--@Table talent_tech_innovation-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="teacher" property="teacher" />
+    <result column="project_number" property="projectNumber" />
+    <result column="project_name" property="projectName" />
+    <result column="project_category" property="projectCategory" />
+    <result column="create_time" property="createTime" />
+    <result column="end_time" property="endTime" />
+    <result column="project_source" property="projectSource" />
+    <result column="student_host" property="studentHost" />
+    <result column="student_category" property="studentCategory" />
+    <result column="student_team" property="studentTeam" />
+    <result column="finish_time" property="finishTime" />
+    <result column="remarks" property="remarks" />
+    <result column="achievement" property="achievement" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, teacher, project_number, 
+    project_name, project_category, create_time, end_time, project_source, student_host, 
+    student_category, student_team, finish_time, remarks, achievement, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.TalentTechInnovation">
+    <!--@mbg.generated-->
+    insert into talent_tech_innovation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="teacher != null">
+        teacher,
+      </if>
+      <if test="projectNumber != null">
+        project_number,
+      </if>
+      <if test="projectName != null">
+        project_name,
+      </if>
+      <if test="projectCategory != null">
+        project_category,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="projectSource != null">
+        project_source,
+      </if>
+      <if test="studentHost != null">
+        student_host,
+      </if>
+      <if test="studentCategory != null">
+        student_category,
+      </if>
+      <if test="studentTeam != null">
+        student_team,
+      </if>
+      <if test="finishTime != null">
+        finish_time,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="achievement != null">
+        achievement,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="teacher != null">
+        #{teacher},
+      </if>
+      <if test="projectNumber != null">
+        #{projectNumber},
+      </if>
+      <if test="projectName != null">
+        #{projectName},
+      </if>
+      <if test="projectCategory != null">
+        #{projectCategory},
+      </if>
+      <if test="createTime != null">
+        #{createTime},
+      </if>
+      <if test="endTime != null">
+        #{endTime},
+      </if>
+      <if test="projectSource != null">
+        #{projectSource},
+      </if>
+      <if test="studentHost != null">
+        #{studentHost},
+      </if>
+      <if test="studentCategory != null">
+        #{studentCategory},
+      </if>
+      <if test="studentTeam != null">
+        #{studentTeam},
+      </if>
+      <if test="finishTime != null">
+        #{finishTime},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="achievement != null">
+        #{achievement},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.TalentTechInnovation">
+    <!--@mbg.generated-->
+    update talent_tech_innovation
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="teacher != null">
+        teacher = #{teacher},
+      </if>
+      <if test="projectNumber != null">
+        project_number = #{projectNumber},
+      </if>
+      <if test="projectName != null">
+        project_name = #{projectName},
+      </if>
+      <if test="projectCategory != null">
+        project_category = #{projectCategory},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime},
+      </if>
+      <if test="projectSource != null">
+        project_source = #{projectSource},
+      </if>
+      <if test="studentHost != null">
+        student_host = #{studentHost},
+      </if>
+      <if test="studentCategory != null">
+        student_category = #{studentCategory},
+      </if>
+      <if test="studentTeam != null">
+        student_team = #{studentTeam},
+      </if>
+      <if test="finishTime != null">
+        finish_time = #{finishTime},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="achievement != null">
+        achievement = #{achievement},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_tech_innovation
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_tech_innovation
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from talent_tech_innovation
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  talent_tech_innovation
+    where id=#{id}
+  </delete>
+</mapper>

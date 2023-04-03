@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ResearchMeetingMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ResearchMeeting">
+    <!--@mbg.generated-->
+    <!--@Table research_meeting-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="participant" property="participant" />
+    <result column="participate_form" property="participateForm" />
+    <result column="meeting_form" property="meetingForm" />
+    <result column="meeting_name" property="meetingName" />
+    <result column="report_topic" property="reportTopic" />
+    <result column="subject_category" property="subjectCategory" />
+    <result column="meeting_place" property="meetingPlace" />
+    <result column="start_time" property="startTime" />
+    <result column="end_time" property="endTime" />
+    <result column="meeting_category" property="meetingCategory" />
+    <result column="remarks" property="remarks" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, job_title, born_at, `year`, teacher_name, participant, participate_form, 
+    meeting_form, meeting_name, report_topic, subject_category, meeting_place, start_time, 
+    end_time, meeting_category, remarks, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ResearchMeeting">
+    <!--@mbg.generated-->
+    insert into research_meeting
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="participant != null">
+        participant,
+      </if>
+      <if test="participateForm != null">
+        participate_form,
+      </if>
+      <if test="meetingForm != null">
+        meeting_form,
+      </if>
+      <if test="meetingName != null">
+        meeting_name,
+      </if>
+      <if test="reportTopic != null">
+        report_topic,
+      </if>
+      <if test="subjectCategory != null">
+        subject_category,
+      </if>
+      <if test="meetingPlace != null">
+        meeting_place,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="meetingCategory != null">
+        meeting_category,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="participant != null">
+        #{participant},
+      </if>
+      <if test="participateForm != null">
+        #{participateForm},
+      </if>
+      <if test="meetingForm != null">
+        #{meetingForm},
+      </if>
+      <if test="meetingName != null">
+        #{meetingName},
+      </if>
+      <if test="reportTopic != null">
+        #{reportTopic},
+      </if>
+      <if test="subjectCategory != null">
+        #{subjectCategory},
+      </if>
+      <if test="meetingPlace != null">
+        #{meetingPlace},
+      </if>
+      <if test="startTime != null">
+        #{startTime},
+      </if>
+      <if test="endTime != null">
+        #{endTime},
+      </if>
+      <if test="meetingCategory != null">
+        #{meetingCategory},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ResearchMeeting">
+    <!--@mbg.generated-->
+    update research_meeting
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="participant != null">
+        participant = #{participant},
+      </if>
+      <if test="participateForm != null">
+        participate_form = #{participateForm},
+      </if>
+      <if test="meetingForm != null">
+        meeting_form = #{meetingForm},
+      </if>
+      <if test="meetingName != null">
+        meeting_name = #{meetingName},
+      </if>
+      <if test="reportTopic != null">
+        report_topic = #{reportTopic},
+      </if>
+      <if test="subjectCategory != null">
+        subject_category = #{subjectCategory},
+      </if>
+      <if test="meetingPlace != null">
+        meeting_place = #{meetingPlace},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime},
+      </if>
+      <if test="meetingCategory != null">
+        meeting_category = #{meetingCategory},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_meeting
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_meeting
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_meeting
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  research_meeting
+    where id=#{id}
+  </delete>
+</mapper>

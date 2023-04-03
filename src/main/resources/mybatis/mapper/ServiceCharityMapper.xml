@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ServiceCharityMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ServiceCharity">
+    <!--@mbg.generated-->
+    <!--@Table service_charity-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="born_at" property="bornAt" />
+    <result column="job_title" property="jobTitle" />
+    <result column="year" property="year" />
+    <result column="declarer" property="declarer" />
+    <result column="content" property="content" />
+    <result column="specific_content" property="specificContent" />
+    <result column="unit" property="unit" />
+    <result column="participate_time" property="participateTime" />
+    <result column="remarks" property="remarks" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, born_at, job_title, `year`, declarer, content, specific_content, 
+    unit, participate_time, remarks, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ServiceCharity">
+    <!--@mbg.generated-->
+    insert into service_charity
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="declarer != null">
+        declarer,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="specificContent != null">
+        specific_content,
+      </if>
+      <if test="unit != null">
+        unit,
+      </if>
+      <if test="participateTime != null">
+        participate_time,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="declarer != null">
+        #{declarer},
+      </if>
+      <if test="content != null">
+        #{content},
+      </if>
+      <if test="specificContent != null">
+        #{specificContent},
+      </if>
+      <if test="unit != null">
+        #{unit},
+      </if>
+      <if test="participateTime != null">
+        #{participateTime},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ServiceCharity">
+    <!--@mbg.generated-->
+    update service_charity
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="declarer != null">
+        declarer = #{declarer},
+      </if>
+      <if test="content != null">
+        content = #{content},
+      </if>
+      <if test="specificContent != null">
+        specific_content = #{specificContent},
+      </if>
+      <if test="unit != null">
+        unit = #{unit},
+      </if>
+      <if test="participateTime != null">
+        participate_time = #{participateTime},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_charity
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_charity
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_charity
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  service_charity
+    where id=#{id}
+  </delete>
+</mapper>

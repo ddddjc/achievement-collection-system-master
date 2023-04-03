@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ResearchReportMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ResearchReport">
+    <!--@mbg.generated-->
+    <!--@Table research_report-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="year" property="year" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="born_at" property="bornAt" />
+    <result column="job_title" property="jobTitle" />
+    <result column="declarer_rank" property="declarerRank" />
+    <result column="first_finisher" property="firstFinisher" />
+    <result column="all_finisher" property="allFinisher" />
+    <result column="unit" property="unit" />
+    <result column="name" property="name" />
+    <result column="finish_time" property="finishTime" />
+    <result column="submit_department" property="submitDepartment" />
+    <result column="employment_status" property="employmentStatus" />
+    <result column="instruction_situation" property="instructionSituation" />
+    <result column="achievement_source" property="achievementSource" />
+    <result column="resource_category" property="resourceCategory" />
+    <result column="subject_category" property="subjectCategory" />
+    <result column="issuance_scope" property="issuanceScope" />
+    <result column="remarks" property="remarks" />
+    <result column="submit_time" property="submitTime" />
+    <result column="department" property="department" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, `year`, teacher_name, born_at, job_title, declarer_rank, first_finisher, 
+    all_finisher, unit, `name`, finish_time, submit_department, employment_status, instruction_situation, 
+    achievement_source, resource_category, subject_category, issuance_scope, remarks, 
+    submit_time, department
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ResearchReport">
+    <!--@mbg.generated-->
+    insert into research_report
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank,
+      </if>
+      <if test="firstFinisher != null">
+        first_finisher,
+      </if>
+      <if test="allFinisher != null">
+        all_finisher,
+      </if>
+      <if test="unit != null">
+        unit,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="finishTime != null">
+        finish_time,
+      </if>
+      <if test="submitDepartment != null">
+        submit_department,
+      </if>
+      <if test="employmentStatus != null">
+        employment_status,
+      </if>
+      <if test="instructionSituation != null">
+        instruction_situation,
+      </if>
+      <if test="achievementSource != null">
+        achievement_source,
+      </if>
+      <if test="resourceCategory != null">
+        resource_category,
+      </if>
+      <if test="subjectCategory != null">
+        subject_category,
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="declarerRank != null">
+        #{declarerRank},
+      </if>
+      <if test="firstFinisher != null">
+        #{firstFinisher},
+      </if>
+      <if test="allFinisher != null">
+        #{allFinisher},
+      </if>
+      <if test="unit != null">
+        #{unit},
+      </if>
+      <if test="name != null">
+        #{name},
+      </if>
+      <if test="finishTime != null">
+        #{finishTime},
+      </if>
+      <if test="submitDepartment != null">
+        #{submitDepartment},
+      </if>
+      <if test="employmentStatus != null">
+        #{employmentStatus},
+      </if>
+      <if test="instructionSituation != null">
+        #{instructionSituation},
+      </if>
+      <if test="achievementSource != null">
+        #{achievementSource},
+      </if>
+      <if test="resourceCategory != null">
+        #{resourceCategory},
+      </if>
+      <if test="subjectCategory != null">
+        #{subjectCategory},
+      </if>
+      <if test="issuanceScope != null">
+        #{issuanceScope},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ResearchReport">
+    <!--@mbg.generated-->
+    update research_report
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="declarerRank != null">
+        declarer_rank = #{declarerRank},
+      </if>
+      <if test="firstFinisher != null">
+        first_finisher = #{firstFinisher},
+      </if>
+      <if test="allFinisher != null">
+        all_finisher = #{allFinisher},
+      </if>
+      <if test="unit != null">
+        unit = #{unit},
+      </if>
+      <if test="name != null">
+        `name` = #{name},
+      </if>
+      <if test="finishTime != null">
+        finish_time = #{finishTime},
+      </if>
+      <if test="submitDepartment != null">
+        submit_department = #{submitDepartment},
+      </if>
+      <if test="employmentStatus != null">
+        employment_status = #{employmentStatus},
+      </if>
+      <if test="instructionSituation != null">
+        instruction_situation = #{instructionSituation},
+      </if>
+      <if test="achievementSource != null">
+        achievement_source = #{achievementSource},
+      </if>
+      <if test="resourceCategory != null">
+        resource_category = #{resourceCategory},
+      </if>
+      <if test="subjectCategory != null">
+        subject_category = #{subjectCategory},
+      </if>
+      <if test="issuanceScope != null">
+        issuance_scope = #{issuanceScope},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_report
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_report
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from research_report
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  research_report
+    where id=#{id}
+  </delete>
+</mapper>

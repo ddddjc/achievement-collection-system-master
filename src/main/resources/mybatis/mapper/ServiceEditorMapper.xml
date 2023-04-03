@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emc.achievement.mapper.ServiceEditorMapper">
+  <resultMap id="BaseResultMap" type="com.emc.achievement.entity.ServiceEditor">
+    <!--@mbg.generated-->
+    <!--@Table service_editor-->
+    <id column="id" property="id" />
+    <result column="username" property="username" />
+    <result column="teacher_name" property="teacherName" />
+    <result column="job_title" property="jobTitle" />
+    <result column="born_at" property="bornAt" />
+    <result column="year" property="year" />
+    <result column="journal_title" property="journalTitle" />
+    <result column="international_number" property="internationalNumber" />
+    <result column="domestic_number" property="domesticNumber" />
+    <result column="paper_category" property="paperCategory" />
+    <result column="position" property="position" />
+    <result column="term" property="term" />
+    <result column="remarks" property="remarks" />
+    <result column="department" property="department" />
+    <result column="submit_time" property="submitTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, teacher_name, job_title, born_at, `year`, journal_title, international_number, 
+    domestic_number, paper_category, `position`, term, remarks, department, submit_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.emc.achievement.entity.ServiceEditor">
+    <!--@mbg.generated-->
+    insert into service_editor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="teacherName != null">
+        teacher_name,
+      </if>
+      <if test="jobTitle != null">
+        job_title,
+      </if>
+      <if test="bornAt != null">
+        born_at,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="journalTitle != null">
+        journal_title,
+      </if>
+      <if test="internationalNumber != null">
+        international_number,
+      </if>
+      <if test="domesticNumber != null">
+        domestic_number,
+      </if>
+      <if test="paperCategory != null">
+        paper_category,
+      </if>
+      <if test="position != null">
+        `position`,
+      </if>
+      <if test="term != null">
+        term,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="submitTime != null">
+        submit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="teacherName != null">
+        #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        #{bornAt},
+      </if>
+      <if test="year != null">
+        #{year},
+      </if>
+      <if test="journalTitle != null">
+        #{journalTitle},
+      </if>
+      <if test="internationalNumber != null">
+        #{internationalNumber},
+      </if>
+      <if test="domesticNumber != null">
+        #{domesticNumber},
+      </if>
+      <if test="paperCategory != null">
+        #{paperCategory},
+      </if>
+      <if test="position != null">
+        #{position},
+      </if>
+      <if test="term != null">
+        #{term},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="department != null">
+        #{department},
+      </if>
+      <if test="submitTime != null">
+        #{submitTime},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.emc.achievement.entity.ServiceEditor">
+    <!--@mbg.generated-->
+    update service_editor
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="teacherName != null">
+        teacher_name = #{teacherName},
+      </if>
+      <if test="jobTitle != null">
+        job_title = #{jobTitle},
+      </if>
+      <if test="bornAt != null">
+        born_at = #{bornAt},
+      </if>
+      <if test="year != null">
+        `year` = #{year},
+      </if>
+      <if test="journalTitle != null">
+        journal_title = #{journalTitle},
+      </if>
+      <if test="internationalNumber != null">
+        international_number = #{internationalNumber},
+      </if>
+      <if test="domesticNumber != null">
+        domestic_number = #{domesticNumber},
+      </if>
+      <if test="paperCategory != null">
+        paper_category = #{paperCategory},
+      </if>
+      <if test="position != null">
+        `position` = #{position},
+      </if>
+      <if test="term != null">
+        term = #{term},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="department != null">
+        department = #{department},
+      </if>
+      <if test="submitTime != null">
+        submit_time = #{submitTime},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <select id="findById" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_editor
+        where id=#{id,jdbcType=BIGINT}
+    </select>
+  <select id="findByUsername" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_editor
+        where username=#{username,jdbcType=VARCHAR}
+    </select>
+  <select id="find" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List" />
+        from service_editor
+    </select>
+<!--auto generated by MybatisCodeHelper on 2020-11-12-->
+  <delete id="deleteById">
+    delete from  service_editor
+    where id=#{id}
+  </delete>
+</mapper>
